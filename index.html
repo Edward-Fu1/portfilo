@@ -59,16 +59,16 @@
     transform: translateY(-2px);
   }
   
-  /* Portfolio Card Styles */
+  /* Portfolio Card Styles - Horizontal Layout */
   .portfolio-card {
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    height: 100%;
   }
   
   .portfolio-card:hover {
@@ -77,14 +77,17 @@
   }
   
   .portfolio-image {
-    width: 100%;
+    width: 40%;
+    min-width: 280px;
     overflow: hidden;
     position: relative;
+    flex-shrink: 0;
   }
   
   .portfolio-image img {
     width: 100%;
-    height: 250px;
+    height: 100%;
+    min-height: 180px;
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
@@ -95,10 +98,19 @@
   }
   
   .portfolio-content {
-    padding: 24px;
+    padding: 20px 24px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .project-overview {
+    font-size: 0.9rem;
+    color: #6c757d;
+    line-height: 1.5;
+    margin-top: 8px;
+    margin-bottom: 12px;
   }
   
   .portfolio-content .project-category {
@@ -112,7 +124,7 @@
   }
   
   .portfolio-content .project-name {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #212529;
     margin-bottom: 4px;
@@ -120,9 +132,9 @@
   }
   
   .portfolio-content .project-subtitle {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #6c757d;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     font-style: italic;
   }
   
@@ -132,8 +144,9 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 600;
-    padding: 10px 24px;
-    font-size: 13px;
+    padding: 8px 20px;
+    font-size: 12px;
+    width: auto;
   }
   
   .portfolio-content .btn:disabled {
@@ -173,16 +186,31 @@
       font-size: 12px;
     }
     
-    .portfolio-image img {
+    .portfolio-card {
+      flex-direction: column;
+    }
+    
+    .portfolio-image {
+      width: 100%;
+      min-width: 100%;
       height: 200px;
     }
     
+    .portfolio-image img {
+      height: 200px;
+      min-height: 200px;
+    }
+    
     .portfolio-content {
-      padding: 20px;
+      padding: 16px 20px;
     }
     
     .portfolio-content .project-name {
       font-size: 1.3rem;
+    }
+    
+    .project-overview {
+      font-size: 0.9rem;
     }
   }
   
@@ -411,7 +439,6 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Projects</h2>
-          <h3 class="section-subheading text-muted">Explore my work across different disciplines</h3>
         </div>
       </div>
       
@@ -430,105 +457,132 @@
       <div class="container-fluid p-0">
         <div class="row portfolio-items">
 
-          <div class="col-lg-4 col-sm-6 portfolio-item mb-4" data-category="ux-research">
+          <div class="col-12 portfolio-item mb-3" data-category="ux-research">
             <div class="portfolio-card">
               <div class="portfolio-image">
                 <img class="img-fluid" src="./img/aws/AWS.jpg" alt="Amazon AWS">
               </div>
               <div class="portfolio-content">
-                <div class="project-category">
-                  User Research Intern
-                </div>
-                <div class="project-name">
-                  Amazon AWS
-                </div>
-                <div class="project-subtitle">
-                  (Provide Upon Request)
+                <div>
+                  <div class="project-category">
+                    User Research Intern
+                  </div>
+                  <div class="project-name">
+                    Amazon AWS
+                  </div>
+                  <div class="project-overview">
+                    Overview placeholder text goes here. This section provides a brief description of the project, its objectives, and key outcomes.
+                  </div>
                 </div>
                 <button class="btn btn-primary btn-sm mt-3" disabled>View Project</button>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item mb-4" data-category="product-management ux-research">
+          <div class="col-12 portfolio-item mb-3" data-category="product-management ux-research">
             <div class="portfolio-card">
               <div class="portfolio-image">
                 <img class="img-fluid" src="./img/IB/ProjectHomeCover.jpg" alt="Internet Brands">
               </div>
               <div class="portfolio-content">
-                <div class="project-category">
-                  Product execution/ UX Research
-                </div>
-                <div class="project-name">
-                  Internet Brands
+                <div>
+                  <div class="project-category">
+                    Product execution/ UX Research
+                  </div>
+                  <div class="project-name">
+                    Internet Brands
+                  </div>
+                  <div class="project-overview">
+                    Overview placeholder text goes here. This section provides a brief description of the project, its objectives, and key outcomes.
+                  </div>
                 </div>
                 <a href="IB.html" class="btn btn-primary btn-sm mt-3">View Project</a>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item mb-4" data-category="ux-research">
+          <div class="col-12 portfolio-item mb-3" data-category="ux-research">
             <div class="portfolio-card">
               <div class="portfolio-image">
                 <img class="img-fluid" src="./img/ASW/ProjectHomeCover.jpg" alt="Art Supply Warehouse">
               </div>
               <div class="portfolio-content">
-                <div class="project-category">
-                  UX Research
-                </div>
-                <div class="project-name">
-                  Art Supply Warehouse
+                <div>
+                  <div class="project-category">
+                    UX Research
+                  </div>
+                  <div class="project-name">
+                    Art Supply Warehouse
+                  </div>
+                  <div class="project-overview">
+                    Overview placeholder text goes here. This section provides a brief description of the project, its objectives, and key outcomes.
+                  </div>
                 </div>
                 <a href="ASW.html" class="btn btn-primary btn-sm mt-3">View Project</a>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item mb-4" data-category="product-management">
+          <div class="col-12 portfolio-item mb-3" data-category="product-management">
             <div class="portfolio-card">
               <div class="portfolio-image">
                 <img class="img-fluid" src="./img/kidsX/kidsx.jpg" alt="KidsX">
               </div>
               <div class="portfolio-content">
-                <div class="project-category">
-                  Innovation Design-A-Thon
-                </div>
-                <div class="project-name">
-                  KidsX
+                <div>
+                  <div class="project-category">
+                    Innovation Design-A-Thon
+                  </div>
+                  <div class="project-name">
+                    KidsX
+                  </div>
+                  <div class="project-overview">
+                    Overview placeholder text goes here. This section provides a brief description of the project, its objectives, and key outcomes.
+                  </div>
                 </div>
                 <a href="kidsX.html" class="btn btn-primary btn-sm mt-3">View Project</a>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item mb-4" data-category="product-management">
+          <div class="col-12 portfolio-item mb-3" data-category="product-management">
             <div class="portfolio-card">
               <div class="portfolio-image">
                 <img class="img-fluid" src="./img/levelup/homecover.jpg" alt="Level Up Program">
               </div>
               <div class="portfolio-content">
-                <div class="project-category">
-                  UI/UX Design
-                </div>
-                <div class="project-name">
-                  Level Up Program
+                <div>
+                  <div class="project-category">
+                    UI/UX Design
+                  </div>
+                  <div class="project-name">
+                    Level Up Program
+                  </div>
+                  <div class="project-overview">
+                    Overview placeholder text goes here. This section provides a brief description of the project, its objectives, and key outcomes.
+                  </div>
                 </div>
                 <a href="levelup.html" class="btn btn-primary btn-sm mt-3">View Project</a>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item mb-4" data-category="business-analyst">
+          <div class="col-12 portfolio-item mb-3" data-category="business-analyst">
             <div class="portfolio-card">
               <div class="portfolio-image">
                 <img class="img-fluid" src="./img/RealTime/homecover.jpg" alt="Real-Time Ops">
               </div>
               <div class="portfolio-content">
-                <div class="project-category">
-                  UI Redesign
-                </div>
-                <div class="project-name">
-                  Real-Time Ops
+                <div>
+                  <div class="project-category">
+                    UI Redesign
+                  </div>
+                  <div class="project-name">
+                    Real-Time Ops
+                  </div>
+                  <div class="project-overview">
+                    Overview placeholder text goes here. This section provides a brief description of the project, its objectives, and key outcomes.
+                  </div>
                 </div>
                 <a href="RealTime.html" class="btn btn-primary btn-sm mt-3">View Project</a>
               </div>
@@ -546,7 +600,6 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Awards & Certificates</h2>
-          <h3 class="section-subheading text-muted">Recognition for excellence and achievement</h3>
         </div>
       </div>
       
