@@ -3,16 +3,7 @@
 
 <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
 <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
-<df-messenger
-  location="us-central1"
-  project-id="sanguine-drake-313614"
-  agent-id="4445635f-9289-47b9-9a03-af45ecbb9612"
-  language-code="en"
-  max-query-length="-1">
-  <df-messenger-chat-bubble
-   chat-title="NTU Chatbot">
-  </df-messenger-chat-bubble>
-</df-messenger>
+
 <style>
   df-messenger {
     z-index: 999;
@@ -24,6 +15,70 @@
     --df-messenger-message-bot-background: #fff;
     bottom: 16px;
     right: 16px;
+  }
+  
+  /* Portfolio Filter Styles */
+  .portfolio-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .filter-btn {
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #212529;
+    background-color: transparent;
+    border: 2px solid #212529;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  .filter-btn:hover {
+    background-color: #212529;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+  
+  .filter-btn.active {
+    background-color: #fed136;
+    border-color: #fed136;
+    color: #212529;
+  }
+  
+  .filter-btn.active:hover {
+    background-color: #fec503;
+    border-color: #fec503;
+    transform: translateY(-2px);
+  }
+  
+  .portfolio-item {
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .portfolio-item.hide {
+    opacity: 0;
+    transform: scale(0.8);
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .filter-btn {
+      padding: 8px 15px;
+      font-size: 12px;
+    }
   }
 </style>
 
@@ -108,9 +163,6 @@
             <a class="nav-link js-scroll-trigger" href="#aboutme">About Me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="./pdf/EdwardFuResume.pdf" target="_blank">Resume</a>
           </li>
         </ul>
@@ -119,6 +171,7 @@
   </nav>
 
   <!-- Header -->
+
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
@@ -132,12 +185,28 @@
   <section class="bg-light page-section" id="project">
     <div class="container">
       <div class="row">
-
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Projects</h2>
+          <h3 class="section-subheading text-muted">Explore my work across different disciplines</h3>
+        </div>
       </div>
+      
+      <!-- Filter Tabs -->
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5">
+          <div class="portfolio-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="product-management">Product Management</button>
+            <button class="filter-btn" data-filter="business-analyst">Business Analyst</button>
+            <button class="filter-btn" data-filter="ux-research">UX Research</button>
+          </div>
+        </div>
+      </div>
+      
       <div class="container-fluid p-0">
-        <div class="row no-gutters">
+        <div class="row no-gutters portfolio-items">
 
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-4 col-sm-6 portfolio-item" data-category="ux-research">
 
             <a class="portfolio-box" >
               <img class="img-fluid" src="./img/aws/AWS.jpg" alt="">
@@ -155,7 +224,7 @@
           </div>
 
 
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-4 col-sm-6 portfolio-item" data-category="product-management ux-research">
 
             <a class="portfolio-box" href="IB.html">
               <img class="img-fluid" src="./img/IB/ProjectHomeCover.jpg" alt="">
@@ -170,7 +239,7 @@
             </a>
           </div>
 
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-4 col-sm-6 portfolio-item" data-category="ux-research">
 
             <a class="portfolio-box" href="ASW.html">
               <img class="img-fluid" src="./img/ASW/ProjectHomeCover.jpg" alt="">
@@ -185,7 +254,7 @@
             </a>
           </div>
 
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-4 col-sm-6 portfolio-item" data-category="product-management">
 
             <a class="portfolio-box" href="kidsX.html">
               <img class="img-fluid" src="./img/kidsX/kidsx.jpg" alt="">
@@ -201,7 +270,7 @@
           </div>
 
 
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-4 col-sm-6 portfolio-item" data-category="product-management">
 
             <a class="portfolio-box" href="levelup.html">
               <img class="img-fluid" src="./img/levelup/homecover.jpg" alt="">
@@ -216,7 +285,7 @@
             </a>
           </div>
 
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-4 col-sm-6 portfolio-item" data-category="business-analyst">
 
             <a class="portfolio-box" href="RealTime.html">
               <img class="img-fluid" src="./img/RealTime/homecover.jpg" alt="">
@@ -233,11 +302,6 @@
 
         </div>
       </div>
-
-
-
-
-    </div>
     </div>
   </section>
 
@@ -277,69 +341,6 @@
       </div>
     </div>
   </section>
-  <!-- Skills -->
-  <section class="bg-light page-section" id="skills">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Skills</h2>
-
-        </div>
-      </div>
-      <div class="row text-center">
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <img class="skillsIcon" src="./img/sketchIcon.png" alt="Sketch Icon">
-          </span>
-          <h4>Sketch</h4>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <img class="skillsIcon" src="./img/AdobeXD.png" alt="Adobe XD Icon">
-          </span>
-          <h4>Adobe XD</h4>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <img class="skillsIcon" src="./img/photoshop.png" alt="Photoshop Icon">
-          </span>
-          <h4>Photoshop</h4>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <img class="skillsIcon" src="./img/invision.svg" alt="invision Icon">
-          </span>
-          <h4>Invision</h4>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <img class="skillsIcon" src="./img/HTML.png" alt="html Icon">
-          </span>
-          <h4>HTML</h4>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <img class="skillsIcon" src="./img/css.png" alt="CSS Icon">
-          </span>
-          <h4>CSS</h4>
-        </div>
-      </div>
-      <br><br>
-      <div>
-        <center>
-          <h4>Persona • Storyboarding • Wireframing • Prototyping </h4>
-        </center>
-        <br>
-        <center>
-          <h4>Interview • Usability testing • Statistical analysis • Survey</h4>
-        </center>
-      </div>
-    </div>
-  </section>
-
-
-
-
 
   <!-- Footer -->
   <footer class="footer">
@@ -400,4 +401,44 @@
       // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
     }
   }
+</script>
+
+<!-- Portfolio Filter Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        // Get filter value
+        const filterValue = this.getAttribute('data-filter');
+        
+        // Filter portfolio items
+        portfolioItems.forEach(item => {
+          const categories = item.getAttribute('data-category').split(' ');
+          
+          if (filterValue === 'all' || categories.includes(filterValue)) {
+            item.classList.remove('hide');
+            // Force reflow for smooth animation
+            item.offsetHeight;
+            item.style.display = '';
+          } else {
+            item.classList.add('hide');
+            // Hide after animation
+            setTimeout(() => {
+              if (item.classList.contains('hide')) {
+                item.style.display = 'none';
+              }
+            }, 300);
+          }
+        });
+      });
+    });
+  });
 </script>
