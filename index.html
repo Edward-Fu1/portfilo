@@ -59,25 +59,246 @@
     transform: translateY(-2px);
   }
   
-  .portfolio-item {
+  /* Portfolio Card Styles */
+  .portfolio-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .portfolio-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+  }
+  
+  .portfolio-image {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .portfolio-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .portfolio-card:hover .portfolio-image img {
+    transform: scale(1.05);
+  }
+  
+  .portfolio-content {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .portfolio-content .project-category {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #6c757d;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  .portfolio-content .project-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 4px;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  .portfolio-content .project-subtitle {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+  
+  .portfolio-content .btn {
+    margin-top: auto;
+    align-self: flex-start;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    padding: 10px 24px;
+    font-size: 13px;
+  }
+  
+  .portfolio-content .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .portfolio-content .btn:disabled:hover {
+    background-color: #fed136;
+    border-color: #fed136;
+    transform: none;
+  }
+  
+  .portfolio-item {
+    transition: opacity 0.1s ease-out, transform 0.1s ease-out, height 0.15s ease-out, margin 0.15s ease-out, padding 0.15s ease-out;
     opacity: 1;
     transform: scale(1);
   }
   
   .portfolio-item.hide {
     opacity: 0;
-    transform: scale(0.8);
+    transform: scale(0.98);
     height: 0;
     overflow: hidden;
     margin: 0;
     padding: 0;
+    pointer-events: none;
+  }
+  
+  .portfolio-item:not(.hide) {
+    transition: opacity 0.05s ease-in, transform 0.05s ease-in;
   }
   
   @media (max-width: 768px) {
     .filter-btn {
       padding: 8px 15px;
       font-size: 12px;
+    }
+    
+    .portfolio-image img {
+      height: 200px;
+    }
+    
+    .portfolio-content {
+      padding: 20px;
+    }
+    
+    .portfolio-content .project-name {
+      font-size: 1.3rem;
+    }
+  }
+  
+  /* Awards & Certificates Styles */
+  .award-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-top: 4px solid #fed136;
+  }
+  
+  .award-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+  }
+  
+  .award-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .award-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 8px;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  .award-organization {
+    font-size: 1rem;
+    color: #6c757d;
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  .award-year {
+    font-size: 0.9rem;
+    color: #fed136;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  
+  .award-description {
+    font-size: 0.95rem;
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  
+  .award-skills {
+    margin-bottom: 16px;
+    text-align: left;
+  }
+  
+  .skills-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  .skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .skills-list li {
+    font-size: 0.9rem;
+    color: #6c757d;
+    line-height: 1.8;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .skills-list li:before {
+    content: '•';
+    color: #fed136;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+  }
+  
+  .award-content .btn {
+    align-self: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    padding: 10px 24px;
+    font-size: 13px;
+    text-decoration: none;
+    margin-top: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .award-card {
+      padding: 24px;
+    }
+    
+    .award-title {
+      font-size: 1.1rem;
     }
   }
 </style>
@@ -160,6 +381,9 @@
             <a class="nav-link js-scroll-trigger" href="#project">Project</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#aboutme">About Me</a>
           </li>
           <li class="nav-item">
@@ -204,103 +428,206 @@
       </div>
       
       <div class="container-fluid p-0">
-        <div class="row no-gutters portfolio-items">
+        <div class="row portfolio-items">
 
-          <div class="col-lg-4 col-sm-6 portfolio-item" data-category="ux-research">
-
-            <a class="portfolio-box" >
-              <img class="img-fluid" src="./img/aws/AWS.jpg" alt="">
-              <div class="portfolio-box-caption">
-
-                <div class="project-category text-white-50">
+          <div class="col-lg-4 col-sm-6 portfolio-item mb-4" data-category="ux-research">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img class="img-fluid" src="./img/aws/AWS.jpg" alt="Amazon AWS">
+              </div>
+              <div class="portfolio-content">
+                <div class="project-category">
                   User Research Intern
                 </div>
                 <div class="project-name">
-                  Amazon AWS <br>
+                  Amazon AWS
+                </div>
+                <div class="project-subtitle">
                   (Provide Upon Request)
                 </div>
+                <button class="btn btn-primary btn-sm mt-3" disabled>View Project</button>
               </div>
-            </a>
+            </div>
           </div>
 
-
-          <div class="col-lg-4 col-sm-6 portfolio-item" data-category="product-management ux-research">
-
-            <a class="portfolio-box" href="IB.html">
-              <img class="img-fluid" src="./img/IB/ProjectHomeCover.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="project-category text-white-50">
+          <div class="col-lg-4 col-sm-6 portfolio-item mb-4" data-category="product-management ux-research">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img class="img-fluid" src="./img/IB/ProjectHomeCover.jpg" alt="Internet Brands">
+              </div>
+              <div class="portfolio-content">
+                <div class="project-category">
                   Product execution/ UX Research
                 </div>
                 <div class="project-name">
                   Internet Brands
                 </div>
+                <a href="IB.html" class="btn btn-primary btn-sm mt-3">View Project</a>
               </div>
-            </a>
+            </div>
           </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item" data-category="ux-research">
-
-            <a class="portfolio-box" href="ASW.html">
-              <img class="img-fluid" src="./img/ASW/ProjectHomeCover.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="project-category text-white-50">
+          <div class="col-lg-4 col-sm-6 portfolio-item mb-4" data-category="ux-research">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img class="img-fluid" src="./img/ASW/ProjectHomeCover.jpg" alt="Art Supply Warehouse">
+              </div>
+              <div class="portfolio-content">
+                <div class="project-category">
                   UX Research
                 </div>
                 <div class="project-name">
                   Art Supply Warehouse
                 </div>
+                <a href="ASW.html" class="btn btn-primary btn-sm mt-3">View Project</a>
               </div>
-            </a>
+            </div>
           </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item" data-category="product-management">
-
-            <a class="portfolio-box" href="kidsX.html">
-              <img class="img-fluid" src="./img/kidsX/kidsx.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="project-category text-white-50">
+          <div class="col-lg-4 col-sm-6 portfolio-item mb-4" data-category="product-management">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img class="img-fluid" src="./img/kidsX/kidsx.jpg" alt="KidsX">
+              </div>
+              <div class="portfolio-content">
+                <div class="project-category">
                   Innovation Design-A-Thon
                 </div>
                 <div class="project-name">
                   KidsX
                 </div>
+                <a href="kidsX.html" class="btn btn-primary btn-sm mt-3">View Project</a>
               </div>
-            </a>
+            </div>
           </div>
 
-
-          <div class="col-lg-4 col-sm-6 portfolio-item" data-category="product-management">
-
-            <a class="portfolio-box" href="levelup.html">
-              <img class="img-fluid" src="./img/levelup/homecover.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="project-category text-white-50">
+          <div class="col-lg-4 col-sm-6 portfolio-item mb-4" data-category="product-management">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img class="img-fluid" src="./img/levelup/homecover.jpg" alt="Level Up Program">
+              </div>
+              <div class="portfolio-content">
+                <div class="project-category">
                   UI/UX Design
                 </div>
                 <div class="project-name">
                   Level Up Program
                 </div>
+                <a href="levelup.html" class="btn btn-primary btn-sm mt-3">View Project</a>
               </div>
-            </a>
+            </div>
           </div>
 
-          <div class="col-lg-4 col-sm-6 portfolio-item" data-category="business-analyst">
-
-            <a class="portfolio-box" href="RealTime.html">
-              <img class="img-fluid" src="./img/RealTime/homecover.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="project-category text-white-50">
+          <div class="col-lg-4 col-sm-6 portfolio-item mb-4" data-category="business-analyst">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img class="img-fluid" src="./img/RealTime/homecover.jpg" alt="Real-Time Ops">
+              </div>
+              <div class="portfolio-content">
+                <div class="project-category">
                   UI Redesign
                 </div>
                 <div class="project-name">
                   Real-Time Ops
                 </div>
+                <a href="RealTime.html" class="btn btn-primary btn-sm mt-3">View Project</a>
               </div>
-            </a>
+            </div>
           </div>
 
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards & Certificates -->
+  <section class="page-section bg-light" id="awards">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Awards & Certificates</h2>
+          <h3 class="section-subheading text-muted">Recognition for excellence and achievement</h3>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="award-card">
+            <div class="award-content">
+              <div class="award-title">NACAS 2020 Innovative Achievement Award</div>
+
+              <div class="award-description">
+                The Level Up Program (An Online Professional Development Website) received Silver Medal recognition after being selected from more than 2,800 entries submitted worldwide.
+              </div>
+              
+              
+              <a href="https://www.case.org/awards/circle-excellence/2019/level-program-online-professional-development-website" target="_blank" class="btn btn-primary btn-sm mt-3">View Award</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="award-card">
+            <div class="award-content">
+              <div class="award-title">Google Advanced Data Analytics Certificate</div>
+              
+              <div class="award-skills">
+                <ul class="skills-list">
+                  <li>Data Analysis</li>
+                  <li>Statistical Modeling</li>
+                  <li>Machine Learning</li>
+                  <li>Data Visualization</li>
+                  <li>Tableau Software</li>
+                </ul>
+              </div>
+              
+              <a href="https://www.coursera.org/account/accomplishments/professional-cert/3BECUGPH4VWS?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=prof" target="_blank" class="btn btn-primary btn-sm mt-3">View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="award-card">
+            <div class="award-content">
+              <div class="award-title">Generative AI with Large Language Models</div>
+              
+              <div class="award-skills">
+
+                <ul class="skills-list">
+                  <li>Large Language Models</li>
+                  <li>Model Deployment</li>
+                  <li>Generative AI</li>
+                  <li>Machine Learning</li>
+                  <li>Prompt Engineering</li>
+                </ul>
+              </div>
+              
+              <a href="https://www.coursera.org/account/accomplishments/verify/NLESA3LHSET9?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course" target="_blank" class="btn btn-primary btn-sm mt-3">View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="award-card">
+            <div class="award-content">
+              <div class="award-title">Data Science Course - Mastering the Fundamentals</div>
+              
+              <div class="award-skills">
+
+                <ul class="skills-list">
+                  <li>NumPy library</li>
+                  <li>Python Programming</li>
+                  <li>Data Visualization</li>
+                  <li>Pandas Library</li>
+                  <li>SQL </li>
+                </ul>
+              </div>
+              
+              <a href="https://moonshot.scaler.com/s/sl/b_54igRrqm" target="_blank" class="btn btn-primary btn-sm mt-3">View Certificate</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -419,26 +746,28 @@
         // Get filter value
         const filterValue = this.getAttribute('data-filter');
         
-        // Filter portfolio items
+        // Filter portfolio items - optimized for speed
         portfolioItems.forEach(item => {
           const categories = item.getAttribute('data-category').split(' ');
+          const shouldShow = filterValue === 'all' || categories.includes(filterValue);
           
-          if (filterValue === 'all' || categories.includes(filterValue)) {
-            item.classList.remove('hide');
-            // Force reflow for smooth animation
-            item.offsetHeight;
+          if (shouldShow) {
+            // Show item immediately - no delay
             item.style.display = '';
+            item.classList.remove('hide');
           } else {
+            // Hide item with quick animation
             item.classList.add('hide');
-            // Hide after animation
+            // Hide from layout after animation
             setTimeout(() => {
               if (item.classList.contains('hide')) {
                 item.style.display = 'none';
               }
-            }, 300);
+            }, 100);
           }
         });
       });
     });
   });
 </script>
+
