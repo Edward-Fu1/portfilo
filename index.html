@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+<df-messenger
+  location="us-central1"
+  project-id="sanguine-drake-313614"
+  agent-id="4445635f-9289-47b9-9a03-af45ecbb9612"
+  language-code="en"
+  max-query-length="-1">
+  <df-messenger-chat-bubble
+   chat-title="NTU Chatbot">
+  </df-messenger-chat-bubble>
+</df-messenger>
+<style>
+  df-messenger {
+    z-index: 999;
+    position: fixed;
+    --df-messenger-font-color: #000;
+    --df-messenger-font-family: Google Sans;
+    --df-messenger-chat-background: #f3f6fc;
+    --df-messenger-message-user-background: #d3e3fd;
+    --df-messenger-message-bot-background: #fff;
+    bottom: 16px;
+    right: 16px;
+  }
+</style>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-T9ZB75C');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149454483-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-149454483-1');
+  </script>
+
+
+
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="shortcut icon" href="./img/logo.ico" />
+  <title>Edward Fu</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/agency.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9ZB75C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">EF</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#project">Project</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#aboutme">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="./pdf/EdwardFuResume.pdf" target="_blank">Resume</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-heading text-uppercase">Hi! I'm Edward Fu. </div>
+        <div class="intro-lead-in"><span id="changeText">Researcher</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Project -->
+  <section class="bg-light page-section" id="project">
+    <div class="container">
+      <div class="row">
+
+      </div>
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+
+          <div class="col-lg-4 col-sm-6">
+
+            <a class="portfolio-box" >
+              <img class="img-fluid" src="./img/aws/AWS.jpg" alt="">
+              <div class="portfolio-box-caption">
+
+                <div class="project-category text-white-50">
+                  User Research Intern
+                </div>
+                <div class="project-name">
+                  Amazon AWS <br>
+                  (Provide Upon Request)
+                </div>
+              </div>
+            </a>
+          </div>
+
+
+          <div class="col-lg-4 col-sm-6">
+
+            <a class="portfolio-box" href="IB.html">
+              <img class="img-fluid" src="./img/IB/ProjectHomeCover.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="project-category text-white-50">
+                  Product execution/ UX Research
+                </div>
+                <div class="project-name">
+                  Internet Brands
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-sm-6">
+
+            <a class="portfolio-box" href="ASW.html">
+              <img class="img-fluid" src="./img/ASW/ProjectHomeCover.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="project-category text-white-50">
+                  UX Research
+                </div>
+                <div class="project-name">
+                  Art Supply Warehouse
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-sm-6">
+
+            <a class="portfolio-box" href="kidsX.html">
+              <img class="img-fluid" src="./img/kidsX/kidsx.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="project-category text-white-50">
+                  Innovation Design-A-Thon
+                </div>
+                <div class="project-name">
+                  KidsX
+                </div>
+              </div>
+            </a>
+          </div>
+
+
+          <div class="col-lg-4 col-sm-6">
+
+            <a class="portfolio-box" href="levelup.html">
+              <img class="img-fluid" src="./img/levelup/homecover.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="project-category text-white-50">
+                  UI/UX Design
+                </div>
+                <div class="project-name">
+                  Level Up Program
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-sm-6">
+
+            <a class="portfolio-box" href="RealTime.html">
+              <img class="img-fluid" src="./img/RealTime/homecover.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="project-category text-white-50">
+                  UI Redesign
+                </div>
+                <div class="project-name">
+                  Real-Time Ops
+                </div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+    </div>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section class="page-section" id="aboutme">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <center><img src="./img/profilePic.jpg" alt="profilePic"></center>
+
+          <div style="padding:10px">
+            <center><a href="https://linkedin.com/in/edward-fu-linkin/" target="_blank" style="color:#0E76A8!important;">
+              <i style="padding:10px" class="fab fa-linkedin"> Welcome to checkout my LinkedIn</i>
+            </a></center>
+          </div>
+
+        </div>
+        <div class="col-lg-7" >
+          <p  style="margin: -5px">
+            <center><h4>Everyone wants to be heard, and I am here to listen.<h4></center><br>
+
+            Hi, I’m Edward. I'm a listener, product manager, ux researcher, and problem solver.<br><br>
+
+            I graduated from UC Irvine with a bachelor's degree in Informatics (Human–computer interaction) and am currently pursuing a Master of Science in integrated design, business, and technology at the University of Southern California.<br><br>
+
+            Ever since I was little, I was taught to listen more and speak less, because listening helps form a better connection and relationship between people, which can provide valuable input on things that are not being said.<br>
+            This skill has been with me throughout my entire life and has helped me tremendously by giving me the upper hand when it comes to producing a human-centered design product. Listening more and with curiosity helped me become a product
+            manager and ux researcher who takes users' feedback to heart, which motivates me to find the best solution for them. When it comes to products, I have the mindset of putting the user first. With that philosophy, I was given the NACAS 2020
+            Innovative Achievement Award for a product I designed called Level Up, launched a minimum viable product (MVP) and many other features on the website for Internet Brands to increase SEO score, user traffic, conversion rate, and provide a
+            better user experience.<br><br>
+
+            With my experience and academic background, I want to create user-driven experiences and engaging designs that make lasting impressions on people.
+
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Skills -->
+  <section class="bg-light page-section" id="skills">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Skills</h2>
+
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <img class="skillsIcon" src="./img/sketchIcon.png" alt="Sketch Icon">
+          </span>
+          <h4>Sketch</h4>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <img class="skillsIcon" src="./img/AdobeXD.png" alt="Adobe XD Icon">
+          </span>
+          <h4>Adobe XD</h4>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <img class="skillsIcon" src="./img/photoshop.png" alt="Photoshop Icon">
+          </span>
+          <h4>Photoshop</h4>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <img class="skillsIcon" src="./img/invision.svg" alt="invision Icon">
+          </span>
+          <h4>Invision</h4>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <img class="skillsIcon" src="./img/HTML.png" alt="html Icon">
+          </span>
+          <h4>HTML</h4>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <img class="skillsIcon" src="./img/css.png" alt="CSS Icon">
+          </span>
+          <h4>CSS</h4>
+        </div>
+      </div>
+      <br><br>
+      <div>
+        <center>
+          <h4>Persona • Storyboarding • Wireframing • Prototyping </h4>
+        </center>
+        <br>
+        <center>
+          <h4>Interview • Usability testing • Statistical analysis • Survey</h4>
+        </center>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <h5>714-388-4818<h5>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline social-buttons">
+
+            <li class="list-inline-item">
+              <a href="https://linkedin.com/in/edward-fu-linkin/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Edwardfu@usc.edu<h5>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/agency.min.js"></script>
+
+</body>
+
+</html>
+<!-- text change in home page -->
+<script>
+  var text = ["Listener", "Product Manager", "UX Researcher", "Problem Solver"];
+  var counter = 0;
+  var elem = document.getElementById("changeText");
+  var inst = setInterval(change, 1250);
+
+  function change() {
+    elem.innerHTML = text[counter];
+    counter++;
+    if (counter >= text.length) {
+      counter = 0;
+      // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
+    }
+  }
+</script>
