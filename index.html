@@ -16,7 +16,7 @@
     bottom: 16px;
     right: 16px;
   }
-  
+
   /* Portfolio Filter Styles */
   .portfolio-filter {
     display: flex;
@@ -25,7 +25,7 @@
     gap: 10px;
     margin-bottom: 30px;
   }
-  
+
   .filter-btn {
     padding: 10px 25px;
     font-size: 14px;
@@ -40,25 +40,25 @@
     transition: all 0.3s ease;
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
-  
+
   .filter-btn:hover {
     background-color: #212529;
     color: #fff;
     transform: translateY(-2px);
   }
-  
+
   .filter-btn.active {
     background-color: #fed136;
     border-color: #fed136;
     color: #212529;
   }
-  
+
   .filter-btn.active:hover {
     background-color: #fec503;
     border-color: #fec503;
     transform: translateY(-2px);
   }
-  
+
   /* Portfolio Card Styles - Horizontal Layout */
   .portfolio-card {
     background-color: #fff;
@@ -72,12 +72,12 @@
     max-width: 1000px;
     margin: 0 auto;
   }
-  
+
   .portfolio-card:hover {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     transform: translateY(-4px);
   }
-  
+
   .portfolio-image {
     width: 40%;
     min-width: 280px;
@@ -86,7 +86,7 @@
     flex-shrink: 0;
     aspect-ratio: 2 / 1;
   }
-  
+
   .portfolio-image img {
     width: 100%;
     height: 100%;
@@ -97,11 +97,11 @@
     top: 0;
     left: 0;
   }
-  
+
   .portfolio-card:hover .portfolio-image img {
     transform: scale(1.05);
   }
-  
+
   .portfolio-content {
     padding: 20px 24px;
     flex-grow: 1;
@@ -109,7 +109,7 @@
     flex-direction: column;
     justify-content: space-between;
   }
-  
+
   .project-tag {
     display: inline-block;
     padding: 4px 12px;
@@ -123,35 +123,35 @@
     margin-bottom: 8px;
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
-  
+
   .project-tag.tag1 {
     background-color: #4A90E2;
   }
-  
+
   .project-tag.tag2 {
     background-color: #50C878;
   }
-  
+
   .project-tag.tag3 {
     background-color: #9B59B6;
   }
-  
+
   .project-tag.tag4 {
     background-color: #E74C3C;
   }
-  
+
   .project-tag.tag5 {
     background-color: #3498DB;
   }
-  
+
   .project-tag.tag6 {
     background-color: #16A085;
   }
-  
+
   .project-tag.tag7 {
     background-color: #E67E22;
   }
-  
+
   .project-overview {
     font-size: 0.9rem;
     color: #6c757d;
@@ -159,7 +159,7 @@
     margin-top: 8px;
     margin-bottom: 12px;
   }
-  
+
   .portfolio-content .project-category {
     font-size: 0.85rem;
     font-weight: 600;
@@ -169,7 +169,7 @@
     margin-bottom: 8px;
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
-  
+
   .portfolio-content .project-name {
     font-size: 1.4rem;
     font-weight: 700;
@@ -177,14 +177,14 @@
     margin-bottom: 4px;
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
-  
+
   .portfolio-content .project-subtitle {
     font-size: 0.85rem;
     color: #6c757d;
     margin-bottom: 12px;
     font-style: italic;
   }
-  
+
   .portfolio-content .btn {
     margin-top: auto;
     align-self: flex-start;
@@ -196,24 +196,24 @@
     width: auto;
     color: #212529 !important;
   }
-  
+
   .portfolio-content .btn:disabled {
     opacity: 0.6;
     cursor: not-allowed;
   }
-  
+
   .portfolio-content .btn:disabled:hover {
     background-color: #fed136;
     border-color: #fed136;
     transform: none;
   }
-  
+
   .portfolio-item {
     transition: opacity 0.1s ease-out, transform 0.1s ease-out, height 0.15s ease-out, margin 0.15s ease-out, padding 0.15s ease-out;
     opacity: 1;
     transform: scale(1);
   }
-  
+
   .portfolio-item.hide {
     opacity: 0;
     transform: scale(0.98);
@@ -223,44 +223,47 @@
     padding: 0;
     pointer-events: none;
   }
-  
+
   .portfolio-item:not(.hide) {
     transition: opacity 0.05s ease-in, transform 0.05s ease-in;
   }
-  
+
   @media (max-width: 768px) {
     .filter-btn {
       padding: 8px 15px;
       font-size: 12px;
     }
-    
+
     .portfolio-card {
       flex-direction: column;
     }
-    
+
     .portfolio-image {
       width: 100%;
       min-width: 100%;
       aspect-ratio: 2 / 1;
     }
-    
+
     .portfolio-image img {
       height: 100%;
     }
-    
+
     .portfolio-content {
       padding: 16px 20px;
     }
-    
+
     .portfolio-content .project-name {
       font-size: 1.3rem;
     }
-    
+
     .project-overview {
       font-size: 0.9rem;
     }
+    .profile-img {
+    max-width: 180px; /* adjust size as needed */
   }
-  
+  }
+
   /* Awards & Certificates Styles */
   .award-card {
     background-color: #fff;
@@ -274,18 +277,18 @@
     flex-direction: column;
     border-top: 4px solid #fed136;
   }
-  
+
   .award-card:hover {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     transform: translateY(-4px);
   }
-  
+
   .award-content {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
   }
-  
+
   .award-title {
     font-size: 1.3rem;
     font-weight: 700;
@@ -293,7 +296,7 @@
     margin-bottom: 8px;
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
-  
+
   .award-organization {
     font-size: 1rem;
     color: #6c757d;
@@ -303,26 +306,26 @@
     letter-spacing: 0.5px;
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
-  
+
   .award-year {
     font-size: 0.9rem;
     color: #fed136;
     font-weight: 600;
     margin-bottom: 12px;
   }
-  
+
   .award-description {
     font-size: 0.95rem;
     color: #6c757d;
     line-height: 1.6;
     margin-bottom: 16px;
   }
-  
+
   .award-skills {
     margin-bottom: 16px;
     text-align: left;
   }
-  
+
   .skills-label {
     font-size: 0.85rem;
     font-weight: 600;
@@ -332,13 +335,13 @@
     letter-spacing: 0.5px;
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
-  
+
   .skills-list {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  
+
   .skills-list li {
     font-size: 0.9rem;
     color: #6c757d;
@@ -346,7 +349,7 @@
     padding-left: 20px;
     position: relative;
   }
-  
+
   .skills-list li:before {
     content: '•';
     color: #fed136;
@@ -355,7 +358,7 @@
     left: 0;
     font-size: 1.2rem;
   }
-  
+
   .award-content .btn {
     align-self: center;
     text-transform: uppercase;
@@ -366,12 +369,16 @@
     text-decoration: none;
     margin-top: auto;
   }
-  
+
+  #aboutme p {
+  line-height: 1.7;
+}
+
   @media (max-width: 768px) {
     .award-card {
       padding: 24px;
     }
-    
+
     .award-title {
       font-size: 1.1rem;
     }
@@ -462,7 +469,7 @@
             <a class="nav-link js-scroll-trigger" href="#aboutme">About Me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="./pdf/EdwardFuResume.pdf" target="_blank">Resume</a>
+            <a class="nav-link js-scroll-trigger" href="./pdf/EdwardFuResume2.pdf" target="_blank">Resume</a>
           </li>
         </ul>
       </div>
@@ -488,7 +495,7 @@
           <h2 class="section-heading text-uppercase">Projects</h2>
         </div>
       </div>
-      
+
       <!-- Filter Tabs -->
       <div class="row">
         <div class="col-lg-12 text-center mb-5">
@@ -500,84 +507,84 @@
           </div>
         </div>
       </div>
-      
+
       <div class="container-fluid p-0">
         <div class="row portfolio-items justify-content-center">
 
 
-          <div class="col-lg-10 col-xl-9 portfolio-item mb-3" data-category="Other">
+          <div class="col-12 portfolio-item mb-3" data-category="product-management">
             <div class="portfolio-card">
               <div class="portfolio-image">
-                <img class="img-fluid" src="./img/aws/AWS.jpg" alt="Amazon AWS">
+                <img class="img-fluid" src="./img/MindScriber.jpg" alt="Amazon AWS">
               </div>
               <div class="portfolio-content">
                 <div>
                   <div class="project-name">
                     Self-Built AI Journal Analysis Tool
                   </div>
-                  <div class="project-tag tag1">tag1</div>
+                  <div class="project-tag tag1">Product Management</div>
                   <div class="project-overview">
                     Designed and developed an AI-powered journaling tool that analyzes personal entries to reveal thought patterns, track emotional shifts, and provide personalized feedback, helping users reflect more effectively.</div>
-                <a href="https://medium.com/@edwardf9394/my-first-app-step-by-step-process-49d5f30b4ff0" 
-                class="btn btn-primary btn-sm mt-3" 
+                <a href="https://medium.com/@edwardf9394/my-first-app-step-by-step-process-49d5f30b4ff0"
+                class="btn btn-primary btn-sm mt-3"
                 target="_blank">
                View Project
-             </a>              
+             </a>
             </div>
             </div>
           </div>
         </div>
 
 
-          <div class="col-lg-10 col-xl-9 portfolio-item mb-3" data-category="Other">
+          <div class="col-12 portfolio-item mb-3" data-category="business-analyst">
             <div class="portfolio-card">
               <div class="portfolio-image">
-                <img class="img-fluid" src="./img/aws/AWS.jpg" alt="Amazon AWS">
+                <img class="img-fluid" src="./img/E-commerce_Late_Order.jpg" alt="Amazon AWS">
               </div>
               <div class="portfolio-content">
                 <div>
                   <div class="project-name">
                     E-commerce Late Order Analysis
                   </div>
-                  <div class="project-tag tag1">tag1</div>
+                  <div class="project-tag tag2">Business Analyst</div>
                   <div class="project-overview">
                     Examined shipping delay patterns using Olist’s e-commerce data to uncover operational bottlenecks and deliver actionable recommendations to enhance customer experience.                  </div>
-                <a href="https://medium.com/@edwardf9394/e-commerce-shipping-analysis-93f2aaa390d7" 
-                class="btn btn-primary btn-sm mt-3" 
+                <a href="https://medium.com/@edwardf9394/e-commerce-shipping-analysis-93f2aaa390d7"
+                class="btn btn-primary btn-sm mt-3"
                 target="_blank">
                View Project
-             </a>              
+             </a>
             </div>
             </div>
           </div>
         </div>
 
 
-          <div class="col-lg-10 col-xl-9 portfolio-item mb-3" data-category="Other">
+          <div class="col-12 portfolio-item mb-3" data-category="business-analyst">
             <div class="portfolio-card">
               <div class="portfolio-image">
-                <img class="img-fluid" src="./img/aws/AWS.jpg" alt="Amazon AWS">
+                <img class="img-fluid" src="./img/Inventory_Optimization.jpg" alt="Inventory_Optimization">
               </div>
               <div class="portfolio-content">
                 <div>
                   <div class="project-name">
                     Inventory Optimization & Storage Analysis at Mint Classics
                   </div>
-                  <div class="project-tag tag1">tag1</div>
+                  <div class="project-tag tag2">Business Analyst</div>
                   <div class="project-overview">
                     Analyzed inventory and storage utilization data at Mint Classics to support strategic decisions around facility consolidation and product line optimization.
                   </div>
-                <a href="https://medium.com/@edwardf9394/data-analysis-and-visualization-of-the-model-car-database-with-mysql-workbench-4218299402c6" 
-                class="btn btn-primary btn-sm mt-3" 
+                <a href="https://medium.com/@edwardf9394/data-analysis-and-visualization-of-the-model-car-database-with-mysql-workbench-4218299402c6"
+                class="btn btn-primary btn-sm mt-3"
                 target="_blank">
                View Project
-             </a>              
+             </a>
             </div>
             </div>
           </div>
         </div>
 
-          <div class="col-lg-10 col-xl-9 portfolio-item mb-3" data-category="Other">
+          <div class="col-12 portfolio-item mb-3" data-category="Other">
             <div class="portfolio-card">
               <div class="portfolio-image">
                 <img class="img-fluid" src="./img/aws/AWS.jpg" alt="Amazon AWS">
@@ -591,15 +598,15 @@
                   <div class="project-overview">
                     Explored admin user behaviors in Amazon Connect to improve first-time and long-term dashboard usability and information layout.                  </div>
                 </div>
-                <a href="./pdf/AWS_final_presentation.pdf" 
-                class="btn btn-primary btn-sm mt-3" 
+                <a href="./pdf/AWS_final_presentation.pdf"
+                class="btn btn-primary btn-sm mt-3"
                 target="_blank">
                View Project
              </a>              </div>
             </div>
           </div>
 
-          <div class="col-lg-10 col-xl-9 portfolio-item mb-3" data-category="product-management">
+          <div class="col-12 portfolio-item mb-3" data-category="product-management">
             <div class="portfolio-card">
               <div class="portfolio-image">
                 <img class="img-fluid" src="./img/IB/ProjectHomeCover.jpg" alt="Internet Brands">
@@ -609,7 +616,7 @@
                   <div class="project-name">
                     Internet Brands
                   </div>
-                  <div class="project-tag tag2">Product execution/ UX Research</div>
+                  <div class="project-tag tag4">Product execution/ UX Research</div>
                   <div class="project-overview">
                     Led the redesign of ApartmentRatings.com’s Write a Review page, owning the full product lifecycle—conducting user research and usability testing, defining requirements and PRDs, coordinating A/B tests, and delivering high-fidelity mockups.
                   </div>
@@ -619,7 +626,7 @@
             </div>
           </div>
 
-          <div class="col-lg-10 col-xl-9 portfolio-item mb-3" data-category="ux-research">
+          <div class="col-12 portfolio-item mb-3" data-category="ux-research">
             <div class="portfolio-card">
               <div class="portfolio-image">
                 <img class="img-fluid" src="./img/ASW/ProjectHomeCover.jpg" alt="Art Supply Warehouse">
@@ -640,7 +647,7 @@
             </div>
           </div>
 
-          <div class="col-lg-10 col-xl-9 portfolio-item mb-3" data-category="product-management">
+          <div class="col-12 portfolio-item mb-3" data-category="product-management">
             <div class="portfolio-card">
               <div class="portfolio-image">
                 <img class="img-fluid" src="./img/kidsX/kidsx.jpg" alt="KidsX">
@@ -651,7 +658,7 @@
                   <div class="project-name">
                     KidsX
                   </div>
-                  <div class="project-tag tag4">Innovation Design-A-Thon</div>
+                  <div class="project-tag tag6">Innovation Design-A-Thon</div>
                   <div class="project-overview">
                     KidsX has partnered with the City of Glendale, CHLA, Microsoft, and verynice on a 3-day design-a-thon challenge to come up with innovative and creative approaches to addressing the issues surrounding food insecurity, which impacts more than 1.2M homes in LA County.
                   </div>
@@ -661,7 +668,7 @@
             </div>
           </div>
 
-          <div class="col-lg-10 col-xl-9 portfolio-item mb-3" data-category="product-management">
+          <div class="col-12 portfolio-item mb-3" data-category="Other">
             <div class="portfolio-card">
               <div class="portfolio-image">
                 <img class="img-fluid" src="./img/levelup/homecover.jpg" alt="Level Up Program">
@@ -682,7 +689,7 @@
             </div>
           </div>
 
-          <div class="col-lg-10 col-xl-9 portfolio-item mb-3" data-category="business-analyst">
+          <div class="col-12 portfolio-item mb-3" data-category="Other">
             <div class="portfolio-card">
               <div class="portfolio-image">
                 <img class="img-fluid" src="./img/RealTime/homecover.jpg" alt="Real-Time Ops">
@@ -716,7 +723,7 @@
           <h2 class="section-heading text-uppercase">Awards & Certificates</h2>
         </div>
       </div>
-      
+
       <div class="row">
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="award-card">
@@ -726,8 +733,8 @@
               <div class="award-description">
                 The Level Up Program (An Online Professional Development Website) received Silver Medal recognition after being selected from more than 2,800 entries submitted worldwide.
               </div>
-              
-              
+
+
               <a href="https://www.case.org/awards/circle-excellence/2019/level-program-online-professional-development-website" target="_blank" class="btn btn-primary btn-sm mt-3">View Award</a>
             </div>
           </div>
@@ -737,7 +744,7 @@
           <div class="award-card">
             <div class="award-content">
               <div class="award-title">Google Advanced Data Analytics Certificate</div>
-              
+
               <div class="award-skills">
                 <ul class="skills-list">
                   <li>Data Analysis</li>
@@ -747,7 +754,7 @@
                   <li>Tableau Software</li>
                 </ul>
               </div>
-              
+
               <a href="https://www.coursera.org/account/accomplishments/professional-cert/3BECUGPH4VWS?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=prof" target="_blank" class="btn btn-primary btn-sm mt-3">View Certificate</a>
             </div>
           </div>
@@ -757,7 +764,7 @@
           <div class="award-card">
             <div class="award-content">
               <div class="award-title">Generative AI with Large Language Models</div>
-              
+
               <div class="award-skills">
 
                 <ul class="skills-list">
@@ -768,7 +775,7 @@
                   <li>Prompt Engineering</li>
                 </ul>
               </div>
-              
+
               <a href="https://www.coursera.org/account/accomplishments/verify/NLESA3LHSET9?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course" target="_blank" class="btn btn-primary btn-sm mt-3">View Certificate</a>
             </div>
           </div>
@@ -778,7 +785,7 @@
           <div class="award-card">
             <div class="award-content">
               <div class="award-title">Data Science Course - Mastering the Fundamentals</div>
-              
+
               <div class="award-skills">
 
                 <ul class="skills-list">
@@ -789,7 +796,7 @@
                   <li>SQL </li>
                 </ul>
               </div>
-              
+
               <a href="https://moonshot.scaler.com/s/sl/b_54igRrqm" target="_blank" class="btn btn-primary btn-sm mt-3">View Certificate</a>
             </div>
           </div>
@@ -804,34 +811,38 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-5">
-          <center><img src="./img/profilePic.jpg" alt="profilePic"></center>
-
-          <div style="padding:10px">
-            <center><a href="https://linkedin.com/in/edward-fu-linkin/" target="_blank" style="color:#0E76A8!important;">
-              <i style="padding:10px" class="fab fa-linkedin"> Welcome to checkout my LinkedIn</i>
-            </a></center>
-          </div>
+          <img src="./img/IMG_1427.JPG" alt="profilePic" style="max-width:100%; height:auto; border-radius:8px;">
 
         </div>
-        <div class="col-lg-7" >
-          <p  style="margin: -5px">
-            <center><h4>Everyone wants to be heard, and I am here to listen.<h4></center><br>
+        <div class="col-lg-7">
+  <h4 class="text-center mb-3">
+    Everyone wants to be heard, and I am here to listen.
+  </h4>
 
-            Hi, I’m Edward. I'm a listener, product manager, ux researcher, and problem solver.<br><br>
+  <p>
+    Hi, I’m <strong>Edward</strong> — a listener, product manager, UX researcher, and problem solver.
+  </p>
 
-            I graduated from UC Irvine with a bachelor's degree in Informatics (Human–computer interaction) and am currently pursuing a Master of Science in integrated design, business, and technology at the University of Southern California.<br><br>
+  <p>
+    I hold a Bachelor’s degree in Informatics (Human–Computer Interaction) from the University of California, Irvine,
+    and a Master of Science in Integrated Design, Business, and Technology from the University of Southern California.
+    I’m currently pursuing a Master of Computer and Information Technology at the University of Pennsylvania.
+  </p>
 
-            Ever since I was little, I was taught to listen more and speak less, because listening helps form a better connection and relationship between people, which can provide valuable input on things that are not being said.<br>
-            This skill has been with me throughout my entire life and has helped me tremendously by giving me the upper hand when it comes to producing a human-centered design product. Listening more and with curiosity helped me become a product
-            manager and ux researcher who takes users' feedback to heart, which motivates me to find the best solution for them. When it comes to products, I have the mindset of putting the user first. With that philosophy, I was given the NACAS 2020
-            Innovative Achievement Award for a product I designed called Level Up, launched a minimum viable product (MVP) and many other features on the website for Internet Brands to increase SEO score, user traffic, conversion rate, and provide a
-            better user experience.<br><br>
+  <p>
+    From an early age, I was taught to listen more than I speak. That mindset has shaped how I build products today.
+    Listening deeply—and with curiosity—helps uncover insights that aren’t always explicitly stated, allowing me to form
+    stronger connections with users and design more thoughtful, human-centered solutions.
+  </p>
 
-            With my experience and academic background, I want to create user-driven experiences and engaging designs that make lasting impressions on people.
+  <p>
+    This approach has guided my work as a product manager and UX researcher. I take user feedback seriously and let it
+    drive decision-making, always prioritizing the user experience.
+    With my combined industry experience and interdisciplinary academic background, I aim to create user-driven
+    products and engaging experiences that leave a lasting impact.
+  </p>
+</div>
 
-          </p>
-
-        </div>
       </div>
     </div>
   </section>
@@ -847,14 +858,14 @@
           <ul class="list-inline social-buttons">
 
             <li class="list-inline-item">
-              <a href="https://linkedin.com/in/edward-fu-linkin/" target="_blank">
+              <a href="https://www.linkedin.com/in/fu-edward/" target="_blank">
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </li>
           </ul>
         </div>
         <div class="col-md-4">
-          <h5>Edwardfu@usc.edu<h5>
+          <h5>Edwardfu@seas.upenn.edu<h5>
         </div>
 
       </div>
@@ -902,22 +913,22 @@
   document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
-    
+
     filterButtons.forEach(button => {
       button.addEventListener('click', function() {
         // Remove active class from all buttons
         filterButtons.forEach(btn => btn.classList.remove('active'));
         // Add active class to clicked button
         this.classList.add('active');
-        
+
         // Get filter value
         const filterValue = this.getAttribute('data-filter');
-        
+
         // Filter portfolio items - optimized for speed
         portfolioItems.forEach(item => {
           const categories = item.getAttribute('data-category').split(' ');
           const shouldShow = filterValue === 'all' || categories.includes(filterValue);
-          
+
           if (shouldShow) {
             // Show item immediately - no delay
             item.style.display = '';
@@ -937,4 +948,3 @@
     });
   });
 </script>
-
