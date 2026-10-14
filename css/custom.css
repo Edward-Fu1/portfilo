@@ -1,5 +1,225 @@
 /* Portfolio overrides. Hand-maintained; Gulp must not overwrite this file. */
 
+.portfolio-image.portfolio-image-cookbook img {
+  object-fit: contain;
+  background-color: #f8f9fa;
+}
+
+/* MaiAgent case study. Scoped to keep existing portfolio pages unchanged. */
+.cookbook-case .cookbook-hero {
+  padding: 160px 0 64px;
+  color: #fff;
+  background-color: #2c3e50;
+}
+
+.cookbook-case .cookbook-kicker,
+.cookbook-case .cookbook-eyebrow {
+  margin-bottom: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.cookbook-case .cookbook-kicker {
+  color: #fed136;
+}
+
+.cookbook-case .cookbook-hero h1 {
+  max-width: 880px;
+  margin-bottom: 20px;
+  font-size: clamp(2.1rem, 4.5vw, 3.8rem);
+  line-height: 1.15;
+}
+
+.cookbook-case .cookbook-lead {
+  max-width: 760px;
+  margin-bottom: 28px;
+  color: #e9ecef;
+  font-size: 21px;
+}
+
+.cookbook-case .cookbook-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cookbook-case .cookbook-actions .btn,
+.cookbook-case .cookbook-closing .btn {
+  padding: 12px 20px;
+}
+
+.cookbook-case .btn-primary {
+  color: #212529;
+}
+
+.cookbook-case .cookbook-facts {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr 1fr;
+  gap: 24px;
+  margin: 40px 0 0;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cookbook-case .cookbook-facts dt {
+  margin-bottom: 8px;
+  color: #fed136;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.cookbook-case .cookbook-facts dd {
+  margin-bottom: 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.cookbook-case .cookbook-section {
+  padding: 72px 0;
+}
+
+.cookbook-case .cookbook-section-muted {
+  background-color: #f8f9fa;
+}
+
+.cookbook-case .cookbook-section-intro,
+.cookbook-case .cookbook-reading-width {
+  max-width: 860px;
+}
+
+.cookbook-case h2 {
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  font-size: clamp(1.65rem, 3vw, 2.2rem);
+  line-height: 1.3;
+}
+
+.cookbook-case h3 {
+  margin-bottom: 12px;
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+.cookbook-case p {
+  padding: 0;
+  line-height: 1.75;
+}
+
+.cookbook-case .cookbook-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.cookbook-case .cookbook-panel {
+  padding: 28px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.cookbook-case .cookbook-panel p {
+  margin-bottom: 0;
+}
+
+.cookbook-case .cookbook-panel-number {
+  margin-bottom: 16px;
+  color: #007cea;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cookbook-case .cookbook-preview {
+  margin: 40px 0 0;
+}
+
+.cookbook-case .cookbook-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+}
+
+.cookbook-case .cookbook-preview figcaption {
+  margin-top: 12px;
+  color: #6c757d;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.cookbook-case .cookbook-engagement {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  align-items: center;
+  gap: 32px;
+  margin-top: 32px;
+  padding: 28px;
+  border-left: 4px solid #fed136;
+  background-color: #fff;
+}
+
+.cookbook-case .cookbook-engagement-stat strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 30px;
+  line-height: 1.3;
+}
+
+.cookbook-case .cookbook-engagement-stat span {
+  display: block;
+  color: #6c757d;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.cookbook-case .cookbook-engagement p {
+  margin-bottom: 0;
+}
+
+.cookbook-case .cookbook-closing {
+  text-align: center;
+}
+
+.cookbook-case .cookbook-back {
+  display: block;
+  margin-top: 20px;
+  color: #2c3e50;
+}
+
+.cookbook-case .cookbook-footer-link {
+  margin-left: 24px;
+}
+
+@media (max-width: 767px) {
+  .cookbook-case .cookbook-hero {
+    padding: 112px 0 40px;
+  }
+
+  .cookbook-case .cookbook-facts,
+  .cookbook-case .cookbook-grid,
+  .cookbook-case .cookbook-engagement {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cookbook-case .cookbook-section {
+    padding: 48px 0;
+  }
+
+  .cookbook-case .cookbook-panel,
+  .cookbook-case .cookbook-engagement {
+    padding: 24px;
+  }
+
+  .cookbook-case .cookbook-lead {
+    font-size: 18px;
+  }
+}
+
 body {
   font-family: 'Arial', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
