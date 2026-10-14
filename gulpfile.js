@@ -10,7 +10,7 @@ const header = require("gulp-header");
 const merge = require("merge-stream");
 const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
-const sass = require("gulp-sass");
+const sass = require("gulp-sass")(require("sass"));
 const uglify = require("gulp-uglify");
 
 // Load package.json for banner
@@ -73,7 +73,7 @@ function modules() {
 // CSS task
 function css() {
   return gulp
-    .src("./scss/**/*.scss")
+    .src("./scss/agency.scss")
     .pipe(plumber())
     .pipe(sass({
       outputStyle: "expanded",
@@ -118,6 +118,7 @@ function js() {
 // Watch files
 function watchFiles() {
   gulp.watch("./scss/**/*", css);
+  gulp.watch("./css/custom.css", browserSyncReload);
   gulp.watch(["./js/**/*", "!./js/**/*.min.js"], js);
   gulp.watch("./**/*.html", browserSyncReload);
 }
