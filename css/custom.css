@@ -589,3 +589,80 @@ df-messenger {
     font-size: 1.1rem;
   }
 }
+
+/* Compact education showcase inside About Me. */
+#aboutme .education-section {
+  margin-top: 48px;
+  padding: 32px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+}
+
+#aboutme .education-section h3 {
+  margin: 0 0 24px;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+#aboutme .education-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#aboutme .education-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 0;
+  line-height: 1.5;
+}
+
+#aboutme .education-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 52px;
+  height: 52px;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+#aboutme .education-badge-penn { background-color: #e8edf6; color: #011f5b; }
+#aboutme .education-badge-usc { background-color: #f8eaea; color: #990000; }
+#aboutme .education-badge-uci { background-color: #e7f1f8; color: #0064a4; }
+
+#aboutme .education-details { min-width: 0; }
+
+#aboutme .education-details h4 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+#aboutme .education-details p {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+#aboutme .education-details .education-degree { color: #495057; }
+#aboutme .education-details .education-dates { margin-top: 8px; color: #626b73; }
+#aboutme .education-focus, #aboutme .education-status { display: block; }
+#aboutme .education-focus { font-size: 14px; }
+#aboutme .education-status { color: #495057; font-size: 13px; }
+
+@media (max-width: 991.98px) {
+  #aboutme .education-list { grid-template-columns: 1fr; gap: 24px; }
+}
+
+@media (max-width: 575.98px) {
+  #aboutme .education-section { padding: 24px 20px; margin-top: 32px; }
+}
