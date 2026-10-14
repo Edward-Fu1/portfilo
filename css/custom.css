@@ -654,9 +654,8 @@ df-messenger {
 
 #aboutme .education-details .education-degree { color: #495057; }
 #aboutme .education-details .education-dates { margin-top: 8px; color: #626b73; }
-#aboutme .education-focus, #aboutme .education-status { display: block; }
+#aboutme .education-focus { display: block; }
 #aboutme .education-focus { font-size: 14px; }
-#aboutme .education-status { color: #495057; font-size: 13px; }
 
 @media (max-width: 991.98px) {
   #aboutme .education-list { grid-template-columns: 1fr; gap: 24px; }
