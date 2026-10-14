@@ -1,3 +1,19 @@
+# Edward Fu's portfolio
+
+## Maintaining styles
+
+Edit `css/custom.css` for portfolio typography, spacing, case-study helpers, homepage cards, filters, and awards. All pages load it after the generated theme stylesheet. Keep custom overrides out of `css/agency.css` and `css/agency.min.css`, because rebuilding replaces those files.
+
+Edit `scss/agency.scss` and its partials for changes to the underlying theme. Run `npm ci` and `npm run build:css` to regenerate the theme CSS with Dart Sass. Gulp compiles only `scss/agency.scss`, so it cannot overwrite `css/custom.css`. `npm start` also reloads the browser when the custom stylesheet changes.
+
+## Analytics
+
+Every page loads the `GTM-M37FH2HZ` container once in the head, with its matching fallback immediately after the body opens. GA4 measurement ID `G-753HGHDCQB` is configured in Tag Manager through the **GA4 - Portfolio Google tag**, using the **Initialization - All Pages** trigger. Do not add a second direct `gtag.js` installation to the HTML. Use Tag Assistant to verify tag changes before publishing them.
+
+The analytics property and container are managed in Google's account settings; changing the website's snippets does not update their configuration.
+
+## Original theme
+
 # [Start Bootstrap - Agency](https://startbootstrap.com/template-overviews/agency/)
 
 [Agency](https://startbootstrap.com/template-overviews/agency/) is a one page agency portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid with hover effects, full page portfolio item modals, a responsive timeline, and a working PHP contact form.
