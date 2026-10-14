@@ -622,21 +622,20 @@ df-messenger {
   line-height: 1.5;
 }
 
-#aboutme .education-badge {
+#aboutme .education-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 0 0 52px;
-  height: 52px;
-  border-radius: 8px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
+  flex: 0 0 72px;
+  height: 72px;
 }
 
-#aboutme .education-badge-penn { background-color: #e8edf6; color: #011f5b; }
-#aboutme .education-badge-usc { background-color: #f8eaea; color: #990000; }
-#aboutme .education-badge-uci { background-color: #e7f1f8; color: #0064a4; }
+#aboutme .education-icon img {
+  display: block;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
 
 #aboutme .education-details { min-width: 0; }
 
